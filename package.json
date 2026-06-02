@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-math-clonlara",
+  "version": "1.0.0",
+  "description": "Portfolio de mathématiques avancées - Clonlara School",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

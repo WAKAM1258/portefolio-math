@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Spirale : Algèbre Avancée — Liam | Clonlara School</title>
+  <meta name="description" content="Découvrez le parcours de 90 heures d'étude en autonomie en algèbre avancée mené par Liam dans le cadre du projet Spirale à Clonlara School. Méthodologie, journal de bord et bilan.">
+  
+  <!-- Polices Google : Outfit (moderne, géométrique), Lora (sérif académique), Fira Code (monospace technique) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Styles principaux -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Barre de progression de lecture -->
+  <div id="scroll-progress" class="scroll-progress-bar"></div>
+
+  <!-- En-tête / Navigation Glassmorphic -->
+  <header class="main-header" id="main-header">
+    <div class="header-container">
+      <a href="#accueil" class="logo">
+        <span class="logo-symbol">∑</span>
+        <span class="logo-text">Liam<span class="accent-dot">.</span>Maths</span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#accueil" class="nav-link active" id="link-accueil">Accueil</a>
+        <a href="#methodologie" class="nav-link" id="link-methodologie">Méthodologie</a>
+        <a href="#journal" class="nav-link" id="link-journal">Journal de Bord</a>
+        <a href="#bilan" class="nav-link" id="link-bilan">Bilan & Défis</a>
+        <a href="#portfolio" class="nav-link" id="link-portfolio">Portfolio</a>
+      </nav>
+      <div class="header-badge">
+        <span class="badge-status">Projet Spirale</span>
+        <span class="badge-hours">90 Heures</span>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Éléments mathématiques flottants décoratifs (Style Fun & Pro) -->
+    <div class="floating-math float-1">x⁷</div>
+    <div class="floating-math float-2">√a</div>
+    <div class="floating-math float-3">aⁿ</div>
+    <div class="floating-math float-4">½</div>
+    <div class="floating-math float-5">b⁻¹</div>
+
+    <!-- 1. Section Accueil (Hero) -->
+    <section id="accueil" class="hero-section">
+      <div class="hero-background-art">
+        <!-- Grille mathématique décorative en arrière-plan -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" opacity="0.04" stroke="#4f46e5">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke-width="1" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="meta-tag">Clonlara School — Projet en Autonomie</div>
+          <h1>Mon Projet Spirale :<br><span class="highlight-indigo">Décrypter l'Algèbre Avancée</span></h1>
+          <p class="hero-lead font-serif">
+            « Les mathématiques ne consistent pas à mémoriser des recettes, mais à comprendre le langage de la logique pure. Dans ce projet Spirale, j'ai choisi de dépasser l'application mécanique des formules pour en comprendre la genèse profonde. »
+          </p>
+          <div class="hero-actions">
+            <a href="#methodologie" class="btn btn-primary" id="btn-explore">Découvrir ma démarche</a>
+            <a href="#journal" class="btn btn-secondary" id="btn-journal">Lire le journal de bord</a>
+          </div>
+        </div>
+
+        <div class="hero-interactive-canvas">
+          <div class="math-card">
+            <div class="math-card-header">
+              <span class="math-card-emblem">√</span>
+              <span class="math-card-title">Cahier d'Algèbre — Liam</span>
+            </div>
+            <div class="math-card-body">
+              <div class="math-formula-sheet">
+                <div class="formula-group">
+                  <span class="group-title">Règles des Puissances</span>
+                  <div class="formula-block">
+                    <span class="math-expression">aⁿ × aᵐ = aⁿ⁺ᵐ</span>
+                    <span class="math-expression">(aⁿ)ᵐ = aⁿˣᵐ</span>
+                    <span class="math-expression">aⁿ / aᵐ = aⁿ⁻ᵐ</span>
+                  </div>
+                </div>
+                <div class="formula-group">
+                  <span class="group-title">Simplification de Racines</span>
+                  <div class="formula-block">
+                    <span class="math-expression">√a = a¹ᐟ²</span>
+                    <span class="math-expression">√a⁷ = √(a⁶ × a) = a³√a</span>
+                    <span class="math-expression">√(x × y) = √x × √y</span>
+                  </div>
+                </div>
+                <div class="formula-group">
+                  <span class="group-title">Fractions Algébriques</span>
+                  <div class="formula-block">
+                    <span class="math-expression">(a / b) / (c / d) = ad / bc</span>
+                    <span class="math-expression">a / b ± c / d = (ad ± bc) / bd</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Comparaison : Objectifs vs Limites -->
+    <section class="comparison-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">Périmètre & Intentions</h2>
+          <p class="section-subtitle font-serif">Ajuster mes priorités pour viser l'assimilation conceptuelle plutôt que la rapidité de surface.</p>
+        </div>
+
+        <div class="comparison-grid">
+          <!-- Carte Visée (Indigo) -->
+          <div class="comparison-card card-target" id="card-target">
+            <div class="card-icon-wrapper icon-target">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <h3>Ce qui était visé</h3>
+            <p class="card-desc">Les objectifs fondamentaux de cette étude approfondie de 90 heures :</p>
+            <ul class="comparison-list">
+              <li>
+                <span class="list-bullet-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <div>
+                  <strong>Développement de la logique pure</strong>
+                  <p>Traiter les concepts non comme des abstractions rigides, mais comme des structures logiques interconnectées.</p>
+                </div>
+              </li>
+              <li>
+                <span class="list-bullet-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <div>
+                  <strong>Compréhension du "pourquoi"</strong>
+                  <p>Décortiquer chaque théorème et démonstration pour en assimiler la genèse.</p>
+                </div>
+              </li>
+              <li>
+                <span class="list-bullet-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <div>
+                  <strong>Pratique du calcul mental</strong>
+                  <p>Fortifier l'agilité mentale en limitant le recours systématique aux calculatrices.</p>
+                </div>
+              </li>
+              <li>
+                <span class="list-bullet-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <div>
+                  <strong>Diversité méthodologique</strong>
+                  <p>Étudier et comparer différentes approches pour résoudre un même problème algébrique.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Carte Limité (Orange) -->
+          <div class="comparison-card card-limits" id="card-limits">
+            <div class="card-icon-wrapper icon-limits">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <h3>Ce qui était limité</h3>
+            <p class="card-desc">Les contraintes acceptées pour garantir un apprentissage de qualité :</p>
+            <ul class="comparison-list">
+              <li>
+                <span class="list-bullet-icon warning"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                <div>
+                  <strong>La répétition mécanique</strong>
+                  <p>Éviter l'accumulation passive d'exercices similaires au profit de défis conceptuels plus profonds.</p>
+                </div>
+              </li>
+              <li>
+                <span class="list-bullet-icon warning"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                <div>
+                  <strong>La course au temps</strong>
+                  <p>Choisir de ralentir sur les sujets ardus plutôt que de survoler le programme pour valider des heures.</p>
+                </div>
+              </li>
+              <li>
+                <span class="list-bullet-icon warning"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                <div>
+                  <strong>La mémorisation pure</strong>
+                  <p>Refuser d'utiliser des formules non démontrées ou non comprises de manière logique.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Section Ressources et Méthodologie -->
+    <section id="methodologie" class="methodology-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Méthode</span>
+          <h2 class="section-title">Ressources & Méthodologie</h2>
+          <p class="section-subtitle font-serif">Une triangulation d'outils complémentaires pour un apprentissage en autonomie.</p>
+        </div>
+
+        <!-- Les 3 outils principaux -->
+        <div class="tools-grid">
+          <div class="tool-card" id="tool-khan">
+            <div class="tool-icon color-khan">K</div>
+            <h3>Khan Academy</h3>
+            <span class="tool-role">La Colonne Vertébrale</span>
+            <p>Cet outil a servi de socle pratique structuré. Il m'a permis d'avoir un parcours balisé, des exercices ciblés, et de suivre ma progression horaire tout en validant mes compétences par des tests de niveau réguliers.</p>
+          </div>
+          <div class="tool-card" id="tool-wiki">
+            <div class="tool-icon color-wiki">W</div>
+            <h3>Wikipédia</h3>
+            <span class="tool-role">L'Approfondissement Théorique</span>
+            <p>Utilisé pour explorer l'histoire des théories et la formulation formelle des théorèmes. Wikipédia m'a permis de replacer les outils algébriques dans leur contexte mathématique historique et de lire des démonstrations complètes.</p>
+          </div>
+          <div class="tool-card" id="tool-gemini">
+            <div class="tool-icon color-gemini">G</div>
+            <h3>Gemini AI</h3>
+            <span class="tool-role">Le Sparring Partner Intellectuel</span>
+            <p>J'ai utilisé l'IA pour lui soumettre mes raisonnements, comparer différentes méthodes de résolution et clarifier des concepts particulièrement abstraits. Elle a agi comme un tuteur dynamique disponible à tout moment.</p>
+          </div>
+        </div>
+
+        <!-- Routine sur 2 mois : Timeline interactive -->
+        <div class="routine-timeline-wrapper">
+          <h3 class="timeline-title text-center">Ma routine sur deux mois</h3>
+          <p class="timeline-desc text-center font-serif">Cliquez sur les différentes phases pour comprendre la progression de mon travail quotidien.</p>
+          
+          <div class="timeline-controls" id="timeline-controls">
+            <button class="timeline-btn active" data-phase="1" id="btn-phase1">Phase 1 : Immersion (S1-S3)</button>
+            <button class="timeline-btn" data-phase="2" id="btn-phase2">Phase 2 : Confrontation (S4-S6)</button>
+            <button class="timeline-btn" data-phase="3" id="btn-phase3">Phase 3 : Consolidation (S7-S8)</button>
+          </div>
+
+          <div class="timeline-content-card" id="timeline-content-card">
+            <div class="phase-detail active" id="phase-1">
+              <div class="phase-meta">
+                <span class="phase-duration">Semaines 1 à 3</span>
+                <span class="phase-focus">Objectif : Poser des bases saines</span>
+              </div>
+              <h4>Immersion & Fondations</h4>
+              <p class="font-serif">Les premières semaines ont été consacrées à la mise en place d'une routine stricte : 1h30 d'étude quotidienne. J'ai principalement utilisé Khan Academy pour évaluer mes compétences de base en calcul algébrique et démarrer le travail sur les puissances et les fractions complexes. C'est à ce moment que j'ai pris l'habitude de poser ma calculatrice pour effectuer les simplifications de tête.</p>
+              <ul class="phase-highlights">
+                <li>Définition de l'espace d'étude et des plages horaires d'autonomie.</li>
+                <li>Évaluation diagnostique initiale sur les puissances et fractions.</li>
+                <li>Mise en place du rituel de calcul mental (15 minutes par session).</li>
+              </ul>
+            </div>
+            
+            <div class="phase-detail" id="phase-2">
+              <div class="phase-meta">
+                <span class="phase-duration">Semaines 4 à 6</span>
+                <span class="phase-focus">Objectif : Explorer la complexité</span>
+              </div>
+              <h4>Approfondissement & Confrontation de méthodes</h4>
+              <p class="font-serif">Cette période a marqué l'introduction de Wikipédia et de Gemini dans mon apprentissage. Face à des simplifications complexes impliquant des racines carrées à exposants élevés (comme a⁷) et des fractions algébriques multiniveaux, j'ai ralenti mon rythme de travail. Je décortiquais chaque étape de simplification et interrogeais Gemini pour comparer différentes approches de réduction d'expressions.</p>
+              <ul class="phase-highlights">
+                <li>Réduction de 50% du rythme d'avancement pour privilégier la théorie.</li>
+                <li>Décomposition étape par étape des exposants fractionnaires et des radicaux.</li>
+                <li>Rédaction de fiches synthétiques sur les lois fondamentales des puissances.</li>
+              </ul>
+            </div>
+
+            <div class="phase-detail" id="phase-3">
+              <div class="phase-meta">
+                <span class="phase-duration">Semaines 7 à 8</span>
+                <span class="phase-focus">Objectif : Valider et structurer</span>
+              </div>
+              <h4>Consolidation & Synthèse</h4>
+              <p class="font-serif">Les deux dernières semaines ont servi à cristalliser les acquis. J'ai réalisé des tests de récapitulation globale et rédigé mon journal de bord. J'ai constaté une hausse significative de ma vitesse de calcul mental et de ma capacité à identifier immédiatement la méthode de résolution la plus élégante pour un problème donné. C'est l'aboutissement de mes 90 heures d'investissement.</p>
+              <ul class="phase-highlights">
+                <li>Tests de synthèse sur l'ensemble du programme d'algèbre avancée.</li>
+                <li>Numérisation de mes résolutions manuscrites pour mon portfolio.</li>
+                <li>Bilan réflexif sur mon autonomie d'apprentissage (Clonlara).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Section Journal de Bord et Application -->
+    <section id="journal" class="journal-section">
+      <div class="container">
+        <div class="journal-layout">
+          <div class="journal-text-side">
+            <span class="section-badge">Journal de bord</span>
+            <h2 class="section-title">L'Approche Qualitative : Apprendre à Ralentir</h2>
+            
+            <div class="journal-body font-serif">
+              <p class="first-letter">
+                Dans notre système d'apprentissage contemporain, nous mesurons trop souvent le progrès par le volume d'exercices complétés. Pour ce projet autonome de 90 heures, j'ai voulu prendre le contre-pied exact de cette logique quantitative. J'ai compris très rapidement que la répétition aveugle sans assimilation structurelle n'était qu'une illusion de maîtrise.
+              </p>
+              <p>
+                Dès lors, face à une impasse ou à un concept d'algèbre supérieure particulièrement récalcitrant, j'ai pris l'habitude d'interrompre ma progression automatique sur Khan Academy. Au lieu de cliquer sur un indice automatique pour "passer l'exercice", j'ai fermé l'onglet pour basculer sur mon cahier de recherche. J'y ai recopié l'équation et ai entamé une double recherche sur Wikipédia et avec Gemini. Mon objectif : comprendre l'origine logique de la formule, la démontrer par moi-même et trouver d'autres chemins de résolution.
+              </p>
+              
+              <blockquote class="journal-quote">
+                « Un seul problème résolu par trois méthodes différentes m'a apporté plus d'agilité cognitive que dix problèmes identiques résolus de façon machinale. »
+              </blockquote>
+
+              <h3>La discipline du calcul mental</h3>
+              <p>
+                Un autre pilier de mon application a été la proscription presque totale de la calculatrice. L'utilisation systématique des outils de calcul court-circuite la réflexion intermédiaire et empêche de "sentir" les proportions numériques. En m'imposant la gymnastique de simplifier de tête les fractions algébriques ou de décomposer mentalement les racines complexes (comme extraire les carrés parfaits d'exposants impairs), j'ai gagné en fluidité cognitive. Cette agilité m'a permis d'aborder des simplifications plus complexes avec un esprit dégagé des blocages calculatoires élémentaires.
+              </p>
+            </div>
+          </div>
+
+          <div class="journal-interactive-side">
+            <!-- Démonstration interactive de simplification -->
+            <div class="method-interactive-box">
+              <div class="box-header">
+                <h4>Simplification d'Expression</h4>
+                <p>Sélectionnez une étape pour analyser ma méthode de simplification classique.</p>
+              </div>
+              <div class="equation-showcase">
+                <span class="equation-text">√(a⁷ · b⁴) / (a² · b⁻¹)</span>
+              </div>
+              <div class="method-selector" id="method-selector">
+                <button class="method-btn active" data-method="factor" id="btn-factor">1. Simplification du Radical</button>
+                <button class="method-btn" data-method="formula" id="btn-formula">2. Réduction des Puissances (a)</button>
+                <button class="method-btn" data-method="graphic" id="btn-graphic">3. Traitement de la Fraction (b)</button>
+              </div>
+              <div class="method-result-display" id="method-result-display">
+                <div class="method-step active" id="step-factor">
+                  <h5>Étape 1 : Simplification du Radical (Racine)</h5>
+                  <p class="font-serif">On extrait les carrés parfaits sous le radical. Comme $b⁴ = (b²)²$ et $a⁷ = a⁶ · a = (a³)² · a$, on peut sortir ces termes de la racine :</p>
+                  <div class="math-steps">
+                    <code>√(a⁷ · b⁴) = √(a⁶ · a · b⁴)</code>
+                    <code>= a³ · b² · √a</code>
+                  </div>
+                  <span class="step-comment font-serif"><strong>Mon avis :</strong> Cette étape demande de décomposer l'exposant impair $a⁷$ en $a⁶ · a$ pour pouvoir en extraire la racine carrée exacte $a³$ de tête.</span>
+                </div>
+
+                <div class="method-step" id="step-formula">
+                  <h5>Étape 2 : Réduction des Puissances de a</h5>
+                  <p class="font-serif">On simplifie les termes de même base $a$ présents au numérateur et au dénominateur en soustrayant leurs exposants :</p>
+                  <div class="math-steps">
+                    <code>Numérateur : a³ · b² · √a</code>
+                    <code>Dénominateur : a² · b⁻¹</code>
+                    <code>a³ / a² = a³⁻² = a¹ = a</code>
+                  </div>
+                  <span class="step-comment font-serif"><strong>Mon avis :</strong> En isolant les puissances de même base, la simplification se fait mentalement par une simple soustraction d'exposants.</span>
+                </div>
+
+                <div class="method-step" id="step-graphic">
+                  <h5>Étape 3 : Traitement de la Fraction (b)</h5>
+                  <p class="font-serif">On regroupe les puissances de $b$ en soustrayant l'exposant négatif du dénominateur : $b² / b⁻¹ = b²⁻⁽⁻¹⁾$ :</p>
+                  <div class="math-steps">
+                    <code>Expression : a · b² · √a / b⁻¹</code>
+                    <code>b² / b⁻¹ = b²⁺¹ = b³</code>
+                    <code>Résultat Final : a · b³ · √a</code>
+                  </div>
+                  <span class="step-comment font-serif"><strong>Mon avis :</strong> Gérer l'exposant négatif au dénominateur revient à le multiplier au numérateur avec un signe d'exposant inversé. C'est la méthode classique la plus rapide.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Section Bilan et Défis -->
+    <section id="bilan" class="bilan-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Bilan</span>
+          <h2 class="section-title">Analyse Réflexive</h2>
+          <p class="section-subtitle font-serif">Un bilan honnête de mes réussites et de la gestion de la complexité.</p>
+        </div>
+
+        <!-- Statistiques de projet rapides -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value">90h</div>
+            <div class="metric-label">Temps d'étude effectif</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">3+</div>
+            <div class="metric-label">Outils en synergie</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">100%</div>
+            <div class="metric-label">Apprentissage autonome</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">0</div>
+            <div class="metric-label">Calculatrice sur 75% du travail</div>
+          </div>
+        </div>
+
+        <div class="bilan-grid">
+          <!-- Les Réussites (Vert Émeraude) -->
+          <div class="bilan-column col-success">
+            <div class="bilan-header">
+              <span class="bilan-icon success"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></span>
+              <h3>Mes Réussites & Gains</h3>
+            </div>
+            <div class="bilan-text font-serif">
+              <p>
+                <strong>Autonomie et autodiscipline accrue</strong> : Planifier mes sessions sur plusieurs semaines sans encadrement direct a grandement fortifié ma rigueur organisationnelle. J'ai su maintenir un rythme exigeant.
+              </p>
+              <p>
+                <strong>Vitesse et structure de réflexion</strong> : L'impact de l'entraînement au calcul mental s'est fait sentir. J'ai acquis le réflexe de "lire" les équations avant de commencer à les résoudre, identifiant plus vite les structures sous-jacentes.
+              </p>
+              <p>
+                <strong>Solidité des bases</strong> : Ce choix délibéré de comprendre le "pourquoi" de chaque formule m'a permis de construire un socle théorique robuste. Je n'ai plus peur de décomposer ou de ré-déduire une équation par moi-même.
+              </p>
+            </div>
+          </div>
+
+          <!-- Les Défis et Limites (Orange) -->
+          <div class="bilan-column col-challenges">
+            <div class="bilan-header">
+              <span class="bilan-icon challenge"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg></span>
+              <h3>Défis & Complexité Gérée</h3>
+            </div>
+            <div class="bilan-text font-serif">
+              <p>
+                <strong>Gestion de la frustration</strong> : Face à certains concepts (comme les exposants fractionnaires complexes, les extractions de radicaux imbriqués ou les fractions rationnelles à plusieurs étages), mon rythme de progression sur Khan Academy a parfois fortement ralenti. Accepter de passer 2 ou 3 jours sur une même règle de simplification a demandé de la patience.
+              </p>
+              <p>
+                <strong>L'équilibre théorie-pratique</strong> : Trouver la juste mesure entre la recherche encyclopédique (Wikipédia, démonstrations) et la pratique concrète d'exercices a nécessité de constants ajustements pour ne pas me perdre dans l'abstraction pure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Section Portfolio et Aboutissement (Placeholders élégants) -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">Espaces Réservés</span>
+          <h2 class="section-title">Portfolio et Aboutissement</h2>
+          <p class="section-subtitle font-serif">Aperçu des travaux physiques et retours d'évaluation à venir.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- Placeholder 1: Preuves de travail -->
+          <div class="portfolio-card-placeholder">
+            <div class="placeholder-icon">
+              <!-- SVG géométrique/graphique abstrait -->
+              <svg viewBox="0 0 100 100" class="svg-decor">
+                <rect x="10" y="10" width="80" height="80" rx="10" fill="none" stroke="#4f46e5" stroke-width="2" stroke-dasharray="5 5" />
+                <path d="M 20 50 Q 35 20, 50 50 T 80 50" fill="none" stroke="#4f46e5" stroke-width="2" />
+                <circle cx="50" cy="50" r="4" fill="#ea580c" />
+              </svg>
+            </div>
+            <div class="placeholder-content">
+              <h3>Encart Portfolio : Mes Captures & Notes</h3>
+              <p class="font-serif">Cet espace accueillera des captures d'écran de mon tableau de bord Khan Academy (compétences acquises, heures cumulées) et des photographies de mes feuilles de recherche manuscrites.</p>
+              <span class="visual-recommendation"><strong>Visuel recommandé :</strong> Un carrousel de captures d'écran nettes avec légendes, ou une image composite de mon cahier de calcul.</span>
+              <div class="file-uploader-mockup">
+                <input type="file" id="upload-portfolio" class="hidden-input" accept="image/*" multiple>
+                <label for="upload-portfolio" class="uploader-btn" id="lbl-portfolio">Simuler l'ajout d'un visuel</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Placeholder 2: Retours de présentation -->
+          <div class="portfolio-card-placeholder">
+            <div class="placeholder-icon">
+              <!-- SVG symbole de dialogue / évaluation -->
+              <svg viewBox="0 0 100 100" class="svg-decor">
+                <rect x="15" y="15" width="70" height="70" rx="8" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 5" />
+                <path d="M 30 35 L 70 35 M 30 50 L 70 50 M 30 65 L 55 65" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="placeholder-content">
+              <h3>Encart Clonlara : Retours d'Évaluation</h3>
+              <p class="font-serif">Cet espace recevra les commentaires officiels de mon conseiller d'école Clonlara et le compte-rendu de ma présentation orale de fin de Spirale.</p>
+              <span class="visual-recommendation"><strong>Visuel recommandé :</strong> Une carte citation élégante avec fond en verre dépoli, ou le fac-similé du bulletin d'évaluation.</span>
+              <div class="file-uploader-mockup">
+                <input type="file" id="upload-feedback" class="hidden-input" accept="image/*">
+                <label for="upload-feedback" class="uploader-btn purple" id="lbl-feedback">Simuler l'ajout d'une évaluation</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Placeholder 3: Conclusion & Développement -->
+          <div class="portfolio-card-placeholder">
+            <div class="placeholder-icon">
+              <!-- SVG symbole de croissance / développement -->
+              <svg viewBox="0 0 100 100" class="svg-decor">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#059669" stroke-width="2" stroke-dasharray="5 5" />
+                <path d="M 30 70 L 45 55 L 60 62 L 75 40" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" />
+                <circle cx="75" cy="40" r="4" fill="#059669" />
+              </svg>
+            </div>
+            <div class="placeholder-content">
+              <h3>Encart Bilan : Conclusion & Perspectives</h3>
+              <p class="font-serif">Ce bloc recueillera ma réflexion finale sur ce que ce projet m'a apporté au-delà des mathématiques : gestion du temps, persévérance et confiance en ma capacité à auto-apprendre.</p>
+              <span class="visual-recommendation"><strong>Visuel recommandé :</strong> Un portrait photographique noir et blanc d'ambiance de mon bureau, ou un schéma mental de mes compétences.</span>
+              <div class="file-uploader-mockup">
+                <input type="file" id="upload-conclusion" class="hidden-input" accept="image/*">
+                <label for="upload-conclusion" class="uploader-btn emerald" id="lbl-conclusion">Simuler l'ajout d'une conclusion</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page académique -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <p class="footer-title">Projet de Spirale Clonlara School</p>
+        <p class="footer-desc">Une production académique autonome axée sur l'agilité cognitive et la logique algébrique.</p>
+      </div>
+      <div class="footer-credits">
+        <p>© 2026 — Liam. Tous droits réservés.</p>
+        <p class="academic-note">Conforme aux standards de validation de Clonlara.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script principal -->
+  <script src="script.js"></script>
+</body>
+</html>
