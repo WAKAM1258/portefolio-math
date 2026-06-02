@@ -4,7 +4,8 @@
   "description": "Portfolio de mathématiques avancées - Clonlara School",
   "main": "index.html",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
     "vite": "^6.0.0"
