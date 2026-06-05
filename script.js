@@ -125,41 +125,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 6. SIMULATION ET IMPORT D'IMAGES POUR LES PLACEHOLDERS ---
-  // Nous rendons les placeholders interactifs ! Si l'utilisateur importe une photo de son travail, elle s'affiche en temps réel.
-  
-  setupMockUploader('upload-portfolio', 'lbl-portfolio');
-  setupMockUploader('upload-feedback', 'lbl-feedback');
-  setupMockUploader('upload-conclusion', 'lbl-conclusion');
-  
-  function setupMockUploader(inputId, labelId) {
-    const fileInput = document.getElementById(inputId);
-    const label = document.getElementById(labelId);
-    
-    if (fileInput && label) {
-      fileInput.addEventListener('change', (e) => {
-        const file = e.target.files[0];
-        if (file) {
-          const parentCard = fileInput.closest('.portfolio-card-placeholder');
-          const placeholderIcon = parentCard.querySelector('.placeholder-icon');
-          const reader = new FileReader();
-          
-          reader.onload = function(event) {
-            // Remplace l'icône SVG par une miniature de l'image
-            if (placeholderIcon) {
-              placeholderIcon.innerHTML = `<img src="${event.target.result}" alt="Aperçu importé" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">`;
-            }
-            
-            // Met à jour le texte du bouton et marque le conteneur comme chargé
-            parentCard.classList.add('loaded');
-            label.textContent = `Modifier : ${file.name.substring(0, 15)}...`;
-            label.style.backgroundColor = 'var(--color-emerald)';
-            label.style.color = '#fff';
-          };
-          
-          reader.readAsDataURL(file);
-        }
-      });
-    }
-  }
+
 });
